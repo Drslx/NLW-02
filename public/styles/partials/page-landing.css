@@ -1,0 +1,144 @@
+
+/* page-landing = pagina inicial */
+:root {
+    font-size: 40%;
+}
+#page-landing {
+    background: var(--color-primary);
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary);
+}
+
+.logo-container img { /* Tamanho da logo */
+    height: 10rem;
+}
+
+.logo-container { 
+    text-align: center; /* Alinhar o logo ao centro */
+    margin-bottom: 3.2rem; /* Cria uma margem abaixo do logo */
+}
+
+.logo-container h2 { /* Mudamos o texto abaixo da logo */
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+.hero-image { /* A largura vai pegar a referencia do container pai e herda*/
+    width: 100%;
+}
+
+.buttons-container { /* Ajusta os botoes dentro do container */
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
+}
+
+.buttons-container a {
+    width: 30rem;
+    height: 10.4rem;
+    /* background-color: rgb(0, 206, 17); */
+    border-radius: 0.8rem; /* Usado para criar bordas */
+    margin-right: 1.6rem;
+    
+    font: 700 2.4rem Archivo; /* Vamos usar font de uma url */
+
+    display: flex; /* Vamos alinhar os botoes */ 
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none; /* Remover decoraçao do nomes dos botoes */
+    transition: background .2s; /* Mudar transicao do botao */
+    color: var(--color-button-text);
+
+}
+.buttons-container a img {
+    width: 4rem; /* Largura da imagem dentro dos botoes */
+    margin-right: 2.4rem; /* Espaço entre a imagem e o texto */
+}
+
+.buttons-container a.study { /* Cor do botao estudar */
+    background: var(--color-primary-lighter);
+    margin-right: 1.6rem;
+
+}.buttons-container a.study:hover { /* Efeito de transicao no botao */
+    background: var(--color-primary-light);
+   /* background: 0; */
+}
+
+.buttons-container a.give-classes {
+    background: var(--color-secondary);
+   /* margin-right: 0; */
+}
+
+.buttons-container a.give-classes:hover {
+    background: var(--color-secondary-dark);
+}
+
+.total-connections { /* Vamos mudar algo relacionado ao total de conexoes */
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img { /* Alinha o texto mais ao meio */
+    margin-left: .8rem;
+}
+
+@media (min-width: 699px) {
+    :root {
+        font-size: 40%;
+    }
+}
+
+@media (min-width: 1100px) {
+    #page-landing #container {
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr; /* Ou 100px 300px 500px Ou 33% 33% 33%*/
+        grid-template-rows: 350px 1fr; /* #50 pixel e 1fraçao*/
+        grid-template-areas: /* Posiçoes estrategicas referente a primeira linha do "template-areas"*/
+        "proffy image image"
+        "button button texting"; /* */
+        column-gap: 87px;
+        row-gap: 86px;
+
+    }
+    .logo-container {
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center;
+        margin: 0;
+    }
+
+    .logo-container img {
+        height: 127px;
+    }
+
+    .hero-image {
+        grid-area: image;
+        height: 350px;
+    }
+
+    .buttons-container {
+        grid-area: button;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .total-connections {
+        grid-area: texting;
+        justify-content: end;
+        font-size: 1.8rem;
+    }
+
+    @media (min-width: 700px) {
+        :root {
+            font-size: 62.5%;
+        }
+    }
+}

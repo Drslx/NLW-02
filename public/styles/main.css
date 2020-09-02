@@ -1,0 +1,71 @@
+
+:root { /* Variaveis de cores em hexadecimal*/ 
+    --color-background: #f0f0f7;
+    --color-primary-lighter: #9871f5;
+    --color-primary-light: #916bea;
+    --color-primary: #774dd6;
+    --color-primary-darker: #6842c2;
+    --color-secondary: #04d361;
+    --color-secondary-dark: #04bf58;
+    --color-title-in-primary: #ffffff;
+    --color-text-in-primary: #d4c2ff;
+    --color-text-complement: #9c98a6;
+    --color-text-base: #6a6180;
+    --color-line-in-white: #e6e6f0;
+    --color-input-background: #f8f8fc;
+    --color-button-text: #ffffff;
+    --color-box-base: #ffffff;
+    --color-box-footer: #fafafc;
+    --color-small-info: #c1bccc;
+    
+    /* Tamanho da fonte padrao: 16px - 100% - 1rem*/
+    /* font-size: 13px; /* Controle das medidas em pixel */
+
+    font-size: 60%; /* "fonte root': Controle das medidas em porcentagem para 1rem*/
+    /* font-size: 1rem; /* Controle de medidas em rem = relativo a fonte que foi setada ao root-element */
+    /* Rosponsivo e a capacidade de se adaptar a diversos dispositivos */
+}
+
+*{ /* Box model,*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html,
+body {
+    height: 100vh; /* "height = altura" Usado para ocupar a viewport */
+}
+
+body {
+    background-color: var(--color-background) ; /* Usamos uma cor da variavel color */
+    
+    display: flex; /* Usado para mudar a regra padrao e posicionar elementos da pagina*/
+    align-items: center;
+    justify-content: center;
+}
+/* Boa pratica usar exemplo abaixo */
+body, 
+input,
+button,
+textarea {
+    /* height: 100vh; */
+    /* Agrupar elemento  pela força de estilizaçao do navegador */
+
+   /*  font: 500 1.6rem Poppins; */
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 1.6rem; 
+    color: var(--color-text-base);
+}
+
+#container { /* Container para definir a largura maxima*/
+    width: 90vw; /* "width = largura */
+    max-width: 700px;
+}     
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
+}
